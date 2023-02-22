@@ -37,6 +37,12 @@ function AccessibilityApp() {
             email="accessibility@edx.org"
           />
         </div>
+        <div className="Moodle-wrapper">
+          <AccessibilityPolicyPage
+            communityAccessibilityLink="https://www.moodle.org/accessibility"
+            email="accessibility@moodle.org"
+          />
+        </div>
       </Provider>
     </IntlProvider>
   );
