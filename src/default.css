@@ -1667,6 +1667,59 @@ optgroup {
   word-wrap: normal !important;
 }
 
+
+div:native-anonymous.moz-accessiblecaret > #bar {
+  margin-left: 49%;
+  background-color: #008aa0;
+}
+
+div:native-anonymous.moz-accessiblecaret.no-bar > #bar {
+  display: none;
+}
+
+div:native-anonymous.moz-accessiblecaret.left > #text-overlay,
+div:native-anonymous.moz-accessiblecaret.left > #image {
+  margin-left: -39%;
+}
+
+div:native-anonymous.moz-accessiblecaret.right > #text-overlay,
+div:native-anonymous.moz-accessiblecaret.right > #image {
+  margin-left: 41%;
+}
+
+div:native-anonymous.moz-accessiblecaret.none {
+  display: none;
+}
+
+/* Custom content container in the CanvasFrame, positioned on top of everything
+   everything else, not reacting to pointer events. */
+div:native-anonymous.moz-custom-content-container {
+  pointer-events: none;
+  top-layer: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Shadow DOM v1
+ * https://drafts.csswg.org/css-scoping/#slots-in-shadow-tree */
+slot {
+  display: contents;
+}
+
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/**
+  Styles for old GFX form widgets
+ **/
+
+
+
 optgroup > option {
   padding-inline-start: 20px;
   font-style: normal;
