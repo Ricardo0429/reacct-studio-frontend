@@ -20,6 +20,18 @@ export const ASSET_TYPES_SHAPE = {
   OTHER: PropTypes.bool,
 };
 
+export const ASSET_TYPES_ALERT = {
+  content_type: PropTypes.string,
+  date_added: PropTypes.string,
+  display_name: PropTypes.string,
+  external_url: PropTypes.string,
+  id: PropTypes.string,
+  locked: PropTypes.bool,
+  portable_url: PropTypes.string,
+  thumbnail: PropTypes.string,
+  url: PropTypes.string,
+};
+
 export const RESPONSE_SHAPE = {
   assetTypes: PropTypes.arrayOf(PropTypes.shape(ASSET_TYPES_SHAPE)),
   assets: PropTypes.arrayOf(PropTypes.shape(ASSET_SHAPE)),
