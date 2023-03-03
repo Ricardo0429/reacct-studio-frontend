@@ -121,4 +121,21 @@ module.exports = Merge.smart(commonConfig, {
       return map;
     }, {}),
   },
+  prodServer: {
+    host: '190.15.25.6',
+    port: 18011,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    publicPath: 'http://0.0.0.0:18011',
+    contentBase: './public',
+    hot: true,
+    overlay: true,
+    proxy: Object.keys(apiEndpoints).reduce((map, endpoint) => {
+      map[apiEndpoints[endpoint]] = { // eslint-disable-line no-param-reassign
+        target: targetUrl,
+      };
+      return map;
+    }, {}),
+  },
 });
